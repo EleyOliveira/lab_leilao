@@ -19,7 +19,7 @@ services:
     ports:
       - "27017:27017"
     env_file:
-      - cmd/auction/.env
+      - cmd/auction/.env    
     volumes:
       - mongo-data:/data/db
     networks:
