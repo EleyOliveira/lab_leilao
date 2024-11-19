@@ -14,7 +14,7 @@ Get http://localhost:8080/auction/1eedf4f0-7a09-46cb-824b-ca89cb8261ff
 Content-Type: application/json
 
 ###
-Get http://localhost:8080/auction?status=1
+Get http://localhost:8080/auction?status=0
 Content-Type: application/json
 
 ###
@@ -23,9 +23,9 @@ Content-Type: application/json
 Host: localhost:8080
 
 {
-    "user_id":"1eedf4f0-7a09-46cb-824b-ca89cb8262ff",
+    "user_id":"1eedf4f0-7a09-46cb-824b-ca89cb8263ff",
     "auction_id":"1eedf4f0-7a09-46cb-824b-ca89cb8261ff",
-    "amount": 15.98  
+    "amount": 17.36  
 }
 
 ###
