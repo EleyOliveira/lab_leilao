@@ -3,9 +3,9 @@ Content-Type: application/json
 Host: localhost:8080
 
 {
-    "product_name":"vassoura",
+    "product_name":"rodo",
     "category":"limpeza",
-    "description":"vassoura limpa legal",
+    "description":"acaba com as poças",
     "condition": 1
 }
 
