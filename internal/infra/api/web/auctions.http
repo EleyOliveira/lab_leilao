@@ -3,9 +3,9 @@ Content-Type: application/json
 Host: localhost:8080
 
 {
-    "product_name":"rodo",
+    "product_name":"sabão em pó 22",
     "category":"limpeza",
-    "description":"acaba com as poças",
+    "description":"todos limpam bem",
     "condition": 1
 }
 
