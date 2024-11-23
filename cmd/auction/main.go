@@ -27,7 +27,7 @@ func main() {
 		return
 	}
 
-	databaseConnection, err := mongodb.NewMongoDBConnection(ctx)
+	databaseConnection, err := mongodb.NewMongoDBConnection(ctx, "MONGODB_URL")
 	if err != nil {
 		log.Fatal(err.Error())
 		return

@@ -3,9 +3,9 @@ Content-Type: application/json
 Host: localhost:8080
 
 {
-    "product_name":"sabão em pó 22",
+    "product_name":"removedor melhor ainda",
     "category":"limpeza",
-    "description":"todos limpam bem",
+    "description":"remove mais ainda",
     "condition": 1
 }
 
@@ -24,8 +24,8 @@ Host: localhost:8080
 
 {
     "user_id":"1eedf4f0-7a09-46cb-824b-ca89cb8263ff",
-    "auction_id":"1eedf4f0-7a09-46cb-824b-ca89cb8261ff",
-    "amount": 17.36  
+    "auction_id":"527f5c6a-6e3d-491d-a619-e0f9242b65ae",
+    "amount": 221.65  
 }
 
 ###
@@ -33,5 +33,5 @@ Get http://localhost:8080/auction/winner/1eedf4f0-7a09-46cb-824b-ca89cb8261ff
 Content-Type: application/json
 
 ###
-Get http://localhost:8080/bid/1eedf4f0-7a09-46cb-824b-ca89cb8261ff
+Get http://localhost:8080/bid/5bd02234-7bb7-45a8-b9b0-a4770fa964ab
 Content-Type: application/json

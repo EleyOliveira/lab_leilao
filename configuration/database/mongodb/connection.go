@@ -3,9 +3,10 @@ package mongodb
 import (
 	"context"
 	"fullcycle-auction_go/configuration/logger"
+	"os"
+
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"os"
 )
 
 const (
@@ -13,8 +14,8 @@ const (
 	MONGODB_DB  = "MONGODB_DB"
 )
 
-func NewMongoDBConnection(ctx context.Context) (*mongo.Database, error) {
-	mongoURL := os.Getenv(MONGODB_URL)
+func NewMongoDBConnection(ctx context.Context, mongoUrlEnv string) (*mongo.Database, error) {
+	mongoURL := os.Getenv(mongoUrlEnv)
 	mongoDatabase := os.Getenv(MONGODB_DB)
 
 	client, err := mongo.Connect(

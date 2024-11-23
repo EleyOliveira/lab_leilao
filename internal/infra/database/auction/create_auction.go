@@ -22,12 +22,14 @@ type AuctionEntityMongo struct {
 	Timestamp   int64                           `bson:"timestamp"`
 }
 type AuctionRepository struct {
-	Collection *mongo.Collection
+	Collection      *mongo.Collection
+	AuctionDuration time.Duration
 }
 
 func NewAuctionRepository(database *mongo.Database) *AuctionRepository {
 	return &AuctionRepository{
-		Collection: database.Collection("auctions"),
+		Collection:      database.Collection("auctions"),
+		AuctionDuration: getAuctionInterval(),
 	}
 }
 
@@ -74,7 +76,7 @@ func (ar *AuctionRepository) ControlTimeUpdateStatusComplete(
 	ctx context.Context,
 	id string) {
 
-	ticker := time.NewTicker(getAuctionInterval())
+	ticker := time.NewTicker(ar.AuctionDuration)
 	defer ticker.Stop()
 
 	done := make(chan bool)
