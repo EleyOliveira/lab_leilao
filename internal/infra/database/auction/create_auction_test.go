@@ -22,13 +22,14 @@ func TestUpdateAuctionStatusCompleted(t *testing.T) {
 		return
 	}
 
-	databaseConnection, err := mongodb.NewMongoDBConnection(ctx, "MONGODB_URL")
+	databaseConnection, err := mongodb.NewMongoDBConnection(ctx, "MONGODB_URL_TEST")
 	if err != nil {
 		log.Fatal(err.Error())
 		return
 	}
 
 	auctionRepositoryTeste := NewAuctionRepository(databaseConnection)
+	auctionRepositoryTeste.AuctionDuration = time.Second * 10
 
 	idTeste := uuid.New().String()
 
@@ -45,9 +46,9 @@ func TestUpdateAuctionStatusCompleted(t *testing.T) {
 	auctionInserido, _ := auctionRepositoryTeste.FindAuctionById(ctx, idTeste)
 	assert.Equal(t, auction_entity.Active, auctionInserido.Status)
 
-	time.Sleep(auctionRepositoryTeste.AuctionDuration)
+	time.Sleep(auctionRepositoryTeste.AuctionDuration + time.Second*10)
 
 	auctionAtualizado, _ := auctionRepositoryTeste.FindAuctionById(ctx, idTeste)
-	assert.Equal(t, auction_entity.Active, auctionAtualizado.Status)
+	assert.Equal(t, auction_entity.Completed, auctionAtualizado.Status)
 
 }

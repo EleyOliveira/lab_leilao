@@ -3,14 +3,14 @@ Content-Type: application/json
 Host: localhost:8080
 
 {
-    "product_name":"removedor melhor ainda",
+    "product_name":"vassoura",
     "category":"limpeza",
-    "description":"remove mais ainda",
+    "description":"varre tudo que tiver pela frente",
     "condition": 1
 }
 
 ###
-Get http://localhost:8080/auction/1eedf4f0-7a09-46cb-824b-ca89cb8261ff
+Get http://localhost:8080/auction/5c055b43-1cb5-4239-a5a0-41cb83374510
 Content-Type: application/json
 
 ###
@@ -23,15 +23,15 @@ Content-Type: application/json
 Host: localhost:8080
 
 {
-    "user_id":"1eedf4f0-7a09-46cb-824b-ca89cb8263ff",
-    "auction_id":"527f5c6a-6e3d-491d-a619-e0f9242b65ae",
-    "amount": 221.65  
+    "user_id":"1eedf4f0-7a09-46cb-824b-ca89cb8263f5",
+    "auction_id":"5c055b43-1cb5-4239-a5a0-41cb83374510",
+    "amount": 16.79  
 }
 
 ###
-Get http://localhost:8080/auction/winner/1eedf4f0-7a09-46cb-824b-ca89cb8261ff
+Get http://localhost:8080/auction/winner/5c055b43-1cb5-4239-a5a0-41cb83374510
 Content-Type: application/json
 
 ###
-Get http://localhost:8080/bid/5bd02234-7bb7-45a8-b9b0-a4770fa964ab
+Get http://localhost:8080/bid/5c055b43-1cb5-4239-a5a0-41cb83374510
 Content-Type: application/json
