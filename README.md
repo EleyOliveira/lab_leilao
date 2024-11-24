@@ -16,6 +16,10 @@ O MongoDB e a aplicação serão inicializados com o comando docker-compose up -
 * Consultar os leilões encerrados: acesse a url http://localhost:8080/auction?status=1, informando o valor 1 no parâmetro status.
 * Incluir um lance: utilize o arquivo auctions.http na pasta internal/infra/api/web, que possui um exemplo de como realizar uma requisição POST para a url http://localhost:8080/bid.
 * Consultar os lances de um leilão: acesse a url http://localhost:8080/bid/(Id do leilão) e informe o Id do leilão no formato UUID.
-* Consultar o lance vencedor de um leilão: acesse a url http://localhost:8080/auction/winner/(Id do leilão) e informe o Id do leilão no formato UUID.
+* Consultar o lance vencedor de um leilão: acesse a url http://localhost:8080/auction/winner/(Id do leilão) e informe o Id do leilão no formato UUID.  
+  
+**Teste**
+
+O método TestUpdateAuctionStatusCompleted no arquivo create_auction_teste.go na pasta internal/infra/database/auction valida se um leilão está sendo encerrado de forma automatizada.
 
 
